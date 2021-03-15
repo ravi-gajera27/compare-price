@@ -1,0 +1,20 @@
+<div class="container-wrapper">
+  <div class="header">
+    <div class="form-group">
+      <input type="text" [(ngModel)]="search_word" name="search" placeholder="Search" class="form-control">
+    </div>
+    <button class="btn btn-info" (click)="search()" type="button">Search</button>
+  </div>
+  <div class="main-content">
+    <div class="card" style="width: 18rem; height: auto" *ngFor="let item of products" 
+    style="cursor: pointer" (click)="compareProduct(item.product_id, item.product_title)">
+      <div class="card-body">
+        <h5 class="card-title">{{ item.product_title }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted" style="text-transform: capitalize"> Category :
+          {{ item.product_category }}</h6>
+        <img [src]="item.product_image">
+      </div>
+    </div>
+    <h6 *ngIf="!available">No Product Match</h6>
+  </div>
+</div>

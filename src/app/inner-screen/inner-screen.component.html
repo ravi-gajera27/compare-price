@@ -1,0 +1,19 @@
+<div class="container-wrapper">
+  <div class="card" style="width: 18rem; height: auto" *ngFor="let item of product_list" 
+  style="cursor: pointer">
+    <div class="card-body">
+      <h5 class="card-title">{{ data.product_name }}</h5>
+      <h6 style="display: flex; justify-content: center">
+      <img style="width:auto;object-fit: contain" [src]="item.product_store_logo">
+      </h6>
+      <img [src]="data.product_images[0]">
+      <h6 class="card-subtitle mb-2 mt-2 text-muted" style="text-transform: capitalize">
+        {{ item.product_price ? 'Price: ₹ ' + item.product_price + '.00' : '' }}</h6>
+      <h6 class="card-subtitle mb-2 mt-2 text-muted" style="text-transform: capitalize">
+        {{ item.product_color ? 'Color: ' + item.product_color : '' }}</h6>
+        <h6 class="card-subtitle mb-2 mt-2 text-muted" style="text-transform: capitalize">
+          {{ item.return_time ? 'Return Time: '+ item.return_time : '' }}</h6>
+    </div>
+  </div>
+  <h6 *ngIf="!available">Product is not available at any store</h6>
+</div>
