@@ -31,10 +31,7 @@ export class InnerScreenComponent implements OnInit {
     this.available = true
     this.dataService.compareProducts(id).subscribe((res)=>{
       this.data = res.data
-      if(!this.data){
-        this.available = false
-      }
-      let stores = res.data.stores
+      let stores = res.data?.stores
      let i = 0
       for(let item of stores){
         if(item[this.retailer_list[i]]){
@@ -42,7 +39,9 @@ export class InnerScreenComponent implements OnInit {
         }
         i++
       }
-      console.log(this.product_list)
+      if(!this.product_list.length){
+        this.available = false
+      }
     })
   }
 }
