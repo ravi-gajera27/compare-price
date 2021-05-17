@@ -1,0 +1,46 @@
+<div class="main">
+  <div class="container" id="container">
+    <div class="form-container sign-in-container">
+      <form (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm">
+        <h1 style="color: var(--PWhite)">Sign In</h1>
+        <div class="social-container">
+          <!-- <a href="#" class="social"><i class="fa fa-facebook"></i></a>
+		<a href="#" class="social"><i class="fa fa-google"></i></a>
+		<a href="#" class="social"><i class="fa fa-linkedin"></i></a> -->
+        </div>
+        <!-- <span>or use your account</span> -->
+        <input
+          class="form-control"
+          type="email"
+          placeholder="Enter Email"
+          [(ngModel)]="model.email"
+          pattern="^[a-zA-Z0-9._-]+@[a-zA-Z.-]+\.[a-zA-Z]{2,4}$"
+          name="email"
+          required
+        />
+        <input
+          class="form-control"
+          type="password"
+          placeholder="Enter Password"
+          [(ngModel)]="model.password"
+          name="password"
+          required
+        />
+        <a href="javascript:void(0)">Forgot Your Password</a>
+
+        <button type="submit">Log In</button>
+      </form>
+    </div>
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-right">
+          <h1>Hello, Friend!</h1>
+          <p>Enter your details and start journey with us</p>
+          <button class="ghost" id="signUp" routerLink="/signup">
+            Sign Up
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

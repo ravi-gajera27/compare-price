@@ -1,0 +1,42 @@
+<div class="main">
+  <div class="container" id="container">
+    <div class="form-container sign-in-container">
+      <form (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm">
+        <h1 style="color: var(--PWhite)">Sign Up</h1>
+        <div class="social-container">
+          <!-- <a href="#" class="social"><i class="fa fa-facebook"></i></a>
+		<a href="#" class="social"><i class="fa fa-google"></i></a>
+		<a href="#" class="social"><i class="fa fa-linkedin"></i></a> -->
+        </div>
+        <!-- <span>or use your account</span> -->
+        <input
+        class="form-control"
+        type="email"
+        placeholder="Enter Name"
+        [(ngModel)]="model.name"
+        name="name"
+        required
+      />
+        <input
+          class="form-control"
+          type="email"
+          placeholder="Enter Email"
+          [(ngModel)]="model.email"
+          pattern="^[a-zA-Z0-9._-]+@[a-zA-Z.-]+\.[a-zA-Z]{2,4}$"
+          name="email"
+          required
+        />
+        <input
+          class="form-control"
+          type="password"
+          placeholder="Enter Password"
+          [(ngModel)]="model.password"
+          name="password"
+          required
+        />
+
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  </div>
+</div>

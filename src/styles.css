@@ -4,6 +4,17 @@
     margin: 0;
 }
 
+:root {
+    --PWhite: #d3d9e0;
+    --PRed: #be5656;
+    --PRed:  rgb(168, 56, 93);
+    --PBGblue: #1d2737;
+    --SBGblue: #2f3b4e;
+    --TBGblue: #364762;
+    --Pblue: #0176ff;
+    --Pyellow: #a2aa74;
+  }
+
 *::-webkit-scrollbar{
     display: none;
 }
