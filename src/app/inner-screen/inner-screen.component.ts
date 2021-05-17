@@ -31,7 +31,7 @@ export class InnerScreenComponent implements OnInit {
     this.available = true
     this.dataService.compareProducts(id).subscribe((res)=>{
       this.data = res.data
-      let stores = res.data?.stores
+      let stores = res.data.stores
      let i = 0
       for(let item of stores){
         if(item[this.retailer_list[i]]){
