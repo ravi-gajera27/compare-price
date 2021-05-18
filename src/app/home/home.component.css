@@ -19,8 +19,39 @@
     min-height:100px;
     justify-content: center;
     align-items: center;
-    background: gray;
+    background: var(--SBGblue);
 }
+
+button {
+    border-radius: 20px;
+    border: 1px solid var(--PBGblue);
+    background-color: var(--PBGblue);
+    color: var(--PWhite);
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+  }
+  
+  button:hover {
+    background-color: var(--PBGblue);
+    transform: scale(0.95);
+  }
+  
+  button:focus {
+    outline: none;
+  }
+
+input {
+    background-color: var(--TBGblue);
+    color: var(--PWhite);
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+  }
 
 .main-content{
     width: 100%;
@@ -29,6 +60,8 @@
     justify-content: space-around;
     flex-wrap: wrap;
     overflow-y: scroll;
+    background: var(--PBGblue);
+    padding: 20px;
 }
 
 .card{

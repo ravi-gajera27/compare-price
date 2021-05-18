@@ -5,6 +5,7 @@
     justify-content: space-around;
     flex-wrap: wrap;
     box-sizing: border-box;
+    background: var(--PBGblue);
 }
 
 
@@ -12,4 +13,5 @@
     margin-top: 10px;
     margin-bottom: 10px;
     max-width: 300px;
+    max-height: 500px;
 }
